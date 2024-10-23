@@ -27,6 +27,9 @@ while (!inCasino)
     Console.WriteLine("Sounds of joyous laughter and gloomy tears fills the air as a brash brawl has sprawled unto a waitress whisked");
     Console.WriteLine("a hogshead of beer, the worn wooden floor dyed in pale ale and red. The Wheel of Dames rapidly clicks");
     Console.WriteLine("in enthralling rhythms as bystanders cheer bidders on, afflictive insults thrown athwart the ample room.");
+    Console.WriteLine("Clinkety-clank noises of coins are heard from two nearby stalls, sharing the sign of C&C's thrifty mortgagee.");
+    Console.WriteLine("Finally, in the gloomy, mostly quiet corner of the room, the bar with the name Ichor's bottles o'plenty");
+    Console.WriteLine("comes across your line of sight, filled with suspicious people and those without vigour in their hearts.");
     Console.WriteLine("");
     Console.WriteLine("[1] Wheel of Dames");
     Console.WriteLine("[2] C&C's thrifty mortgagee");
@@ -42,7 +45,12 @@ while (!inCasino)
         while (!addictedRoulette)
         {
             Console.WriteLine("[Wheel of Dames]");
-            Console.WriteLine("Roulette [Y/N]");
+            Console.WriteLine("You walk over to the Wheel of Dames, attended by several others, a lady dressed in white being the GM.");
+            Console.WriteLine("It appears that the most recent round of betting has ended, as some are celebrating their profits");
+            Console.WriteLine("while others are in despair, losing their mighty bets once more. There's double the reward for choosing");
+            Console.WriteLine("either red or black, while green gives times the amount of tiles exempt of itself, yielding 36 times the");
+            Console.WriteLine("amount. Another session of betting is coming up...");
+            Console.WriteLine("Enter the betting? [Y/N]");
             string answer = Console.ReadLine();
             Console.Clear();
             if (answer == "Y")
@@ -131,7 +139,7 @@ while (!inCasino)
                         else
                         {
                             Console.Clear();
-                            Console.WriteLine("YOU LOST");
+                            Console.WriteLine("YOU LOST...");
                         }
 
                     }
@@ -168,7 +176,7 @@ while (!inCasino)
 
         while (!takeLoan)
         {
-            Console.WriteLine("C&C's thrifty mortgagee");
+            Console.WriteLine("[C&C's thrifty mortgagee]");
             Console.WriteLine("[1] Take a loan");
             Console.WriteLine("[2] Pay off a loan");
             Console.WriteLine("[3] Leave");
@@ -315,84 +323,94 @@ while (!inCasino)
         {
             Console.WriteLine("[Ichor's bottles o'plenty]");
             Console.WriteLine("[1] Approach the bartender");
-            Console.WriteLine("[2] Approach the stranger");
-            Console.WriteLine("[3] Leave");
+            Console.WriteLine("[2] Leave");
             string answer = Console.ReadLine();
             Console.Clear();
 
             if (answer == "1")
             {
-                Console.WriteLine("The bartender gives a curt glance as you approach before returning their gaze to polishing the held glass with a sullied rag,");
-                Console.WriteLine("tranquil from the lousy atmosphere. Not long after, the stultified voice of the bartender encroaches, ");
-                Console.WriteLine("|Make your picking, we've got liquor for all your needs... Loosen up, no one's exempt from life.|");
-                Console.WriteLine("A parchment with a selection of hard liquor rolls out to your side of the counter, written in pitched ink.");
-                Console.WriteLine("@-----------------------------------@");
-                Console.WriteLine("");
-                Console.WriteLine("[1] Berry Ocky Rot     [8] Rum");
-                Console.WriteLine("[2] Brandy             [9] Sherry");
-                Console.WriteLine("[3] Butterbeer         [10] Whiskey");
-                Console.WriteLine("[4] Daisyroot Draught  [11] Wine");
-                Console.WriteLine("[5] Gin");
-                Console.WriteLine("[6] Lobe-Blaster");
-                Console.WriteLine("[7] Mead");
-                Console.WriteLine("");
-                Console.WriteLine("@-----------------------------------@");
-                Console.WriteLine("[12] Leave");
-                string chosenDrink = Console.ReadLine();
+                bool drunkard = false;
 
-                if (chosenDrink != "12")
+                while (!drunkard)
                 {
-                    Console.Clear();
-                    if (chosenDrink == "1")
-                    {
+                    Console.WriteLine("The bartender gives a curt glance as you approach before returning their gaze to polishing the held glass with a sullied rag,");
+                    Console.WriteLine("tranquil from the lousy atmosphere. Not long after, the stultified voice of the bartender encroaches, ");
+                    Console.WriteLine("|Make your picking, we've got liquor for all your needs... Loosen up, it's on the house.|");
+                    Console.WriteLine("A parchment with a selection of hard liquor rolls out to your side of the counter, written in pitched ink.");
+                    Console.WriteLine("");
+                    Console.WriteLine("@-----------------------------------@");
+                    Console.WriteLine("[1] Berry Ocky Rot     [8] Rum");
+                    Console.WriteLine("[2] Brandy             [9] Whiskey");
+                    Console.WriteLine("[3] Butterbeer         [10] Wine");
+                    Console.WriteLine("[4] Daisyroot Draught");
+                    Console.WriteLine("[5] Gin");
+                    Console.WriteLine("[6] Lobe-Blaster");
+                    Console.WriteLine("[7] Mead");
+                    Console.WriteLine("@-----------------------------------@");
+                    Console.WriteLine("");
+                    Console.WriteLine("[11] Leave");
+                    string chosenDrink = Console.ReadLine();
 
-                    } else if (chosenDrink == "2")
-                    {
-
-                    } else if (chosenDrink == "3")
-                    {
-
-                    } else if (chosenDrink == "4")
-                    {
-
-                    } else if (chosenDrink == "5")
-                    {
-
-                    } else if (chosenDrink == "6")
-                    {
-
-                    } else if (chosenDrink == "7")
-                    {
-
-                    } else if (chosenDrink == "8")
-                    {
-
-                    } else if (chosenDrink == "9")
-                    {
-
-                    } else if (chosenDrink == "10")
-                    {
-
-                    } else if (chosenDrink == "11")
-                    {
-
-                    } else
+                    if (chosenDrink != "11")
                     {
                         Console.Clear();
+                        if (chosenDrink == "1")
+                        {
+                            Console.WriteLine("One sip of it later, the taste of fermented berries still remains...");
+                        }
+                        else if (chosenDrink == "2")
+                        {
+                            Console.WriteLine("The familiar flavour of non-descript Brandy spreads, licking your tongue with new sensations...");
+                        }
+                        else if (chosenDrink == "3")
+                        {
+                            Console.WriteLine("It tastes slightly like less-sickly butterscotch..?");
+                        }
+                        else if (chosenDrink == "4")
+                        {
+                            Console.WriteLine("Smells like daisies, tastes like beverage...");
+                        }
+                        else if (chosenDrink == "5")
+                        {
+                            Console.WriteLine("A strong stinge hits your nostrils and tastebuds, a potent beverage...");
+                        }
+                        else if (chosenDrink == "6")
+                        {
+                            Console.WriteLine("NEURON ACTIVATION");
+                        }
+                        else if (chosenDrink == "7")
+                        {
+                            Console.WriteLine("Tastes like oaked honey... Sweet at best but strong in flavour...");
+                        }
+                        else if (chosenDrink == "8")
+                        {
+                            Console.WriteLine("Very sweet, with a sliver of vanilla...");
+                        }
+                        else if (chosenDrink == "9")
+                        {
+                            Console.WriteLine("Smokey with a few flavours...");
+                        }
+                        else if (chosenDrink == "10")
+                        {
+                            Console.WriteLine("Dry... Like, really dry for some reason. Who even drinks this..?");
+                        }
+
+                        Thread.Sleep(5000);
+                        Console.Clear();
+                        drunkard = false;
                     }
-
-                } else if (chosenDrink == "12")
-                {
-                    Console.Clear();
-                    gettingDrunk = true;
-                } else
-                {
-
+                    else if (chosenDrink == "11")
+                    {
+                        Console.Clear();
+                        drunkard = true;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        drunkard = false;
+                    }
                 }
             } else if (answer == "2")
-            {
-
-            } else if (answer == "3")
             {
                 Console.Clear();
                 gettingDrunk = true;
